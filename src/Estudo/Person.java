@@ -1,3 +1,5 @@
+package Estudo;
+
 public class Person {
     //privamos as propriedades para que somente o que estiver dentro do PERSON consiga utiliza-las.
     private String nome;
