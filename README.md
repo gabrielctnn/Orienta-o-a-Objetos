@@ -24,5 +24,14 @@ Este projeto simula um sistema de cadastro de pessoas (`Estudo.Person`), explora
 ---
 
 ## 📂 Estrutura do Código
-- `Estudo.Person.java`: Classe com atributos privados e métodos de acesso.
-- `Estudo.Main.java`: Classe principal para execução e teste do fluxo.
+
+O projeto está organizado em pacotes (packages) para separar os conceitos aprendidos dos exercícios práticos:
+
+- **`src/Estudo/`**: Pasta principal onde exploramos os pilares da POO.
+    - `Person.java`: Classe com atributos privados e métodos de acesso.
+    - `Main.java`: Execução do fluxo de cadastro e teste dos conceitos.
+- **`src/Exercicios/`**: Pasta dedicada à resolução de desafios.
+    - `ex1/Main.java`: Resolução do primeiro exercício.
+    - `ex2/Main.java`: Resolução do segundo exercício.
+    - `ex3/Main.java`: Resolução do terceiro exercício.
+- **`README.md`**: Documentação principal do repositório.
