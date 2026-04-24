@@ -61,6 +61,7 @@
                 this.saldo -= saque;
                 System.out.printf("Você sacou R$ %.2f \n" , saque);
                 Main.menu(this);
+
             }
         }
         public void depositarDinheiro(){

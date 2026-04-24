@@ -2,7 +2,7 @@ package Exercicios.ex1;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws Exception{ Scanner scan = new Scanner(System.in);
+    public static void main(String[] args) throws Exception{Scanner scan = new Scanner(System.in);
     System.out.println("BEM VINDO (A) A CONTA BANCÁRIA");
     System.out.println("Quanto você deseja depositar para abrir sua conta?");
     double depositoInicial = scan.nextDouble();

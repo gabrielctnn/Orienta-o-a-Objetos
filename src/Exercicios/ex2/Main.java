@@ -15,12 +15,12 @@ public class Main {
         while(escolha != 0){
 
 
-                System.out.println("O que deseja fazer no seu carro?\n");
+                System.out.println("\nO que deseja fazer no seu carro?\n");
                 System.out.println("1. Ligar carro.       5. Virar esquerda/direita");
                 System.out.println("2. Desligar carro     6. Verificar Velocidade");
                 System.out.println("3. Acelerar           7. Trocar marcha");
                 System.out.println("4. Desacelerar        0. Sair do programa ");
-                System.out.println("\n . Escolha o que deseja fazer:");;
+                System.out.println("\nEscolha o que deseja fazer:");;
             escolha = scan.nextInt();
 
                 switch (escolha){
