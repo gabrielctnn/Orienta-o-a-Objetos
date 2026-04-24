@@ -2,32 +2,39 @@ package Exercicios.ex2;
 import java.util.Scanner;
 
 public class Main {
-    Scanner scan = new Scanner(System.in);
+    public static void main(String[] args) throws Exception {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("BEM VINDO AO SEU CARRO!");
+        Carro carroGabriel = new Carro();
+        menu(carroGabriel);
+    }
 
-   /*Escreva um código onde controlamos as funções de um carro, ele deve ter as seguintes funções:
-    Ligar o carro;
-    Desligar o carro;
-    Acelerar;
-    diminuir velocidade;
-    virar para esquerda/direita
-    verificar velocidade;
-    trocar a marcha
-    Siga as seguintes regras na implementação
-    Quando o carro for criado ele deve começar desligado, em ponto morto e com sua velocidade em 0
-    O carro desligado não pode realizar nenhuma função;
-    Quando o carro for acelerado ele deve incrementar 1km em sua velocidade (pode chegar no máximo a 120km);
-    Quando diminuir a velocidade do carro ele deve decrementar 1 km de sua velocidade (pode chegar no minimo a 0km);
-    o carro deve possuir 6 marchas, não deve ser permitido pular uma marcha no carro;
-    A velocidade do carro deve respeitar os seguintes limites para cada velocidade
-    se o carro estiver na marcha 0 (ponto morto) ele não pode acelerar
-    se estiver na 1ª marcha sua velocidade pode estar entre 0km e 20km
-    se estiver na 2ª marcha sua velocidade pode estar entre 21km e 40km
-    se estiver na 3ª marcha sua velocidade pode estar entre 41km e 60km
-    se estiver na 4ª marcha sua velocidade pode estar entre 61km e 80km
-    se estiver na 5ª marcha sua velocidade pode estar entre 81km e 100km
-    se estiver na 6ª marcha sua velocidade pode estar entre 101km e 120km
-    O carro podera ser desligado se estiver em ponto morto (marcha 0) e sua velocidade em 0 km
-    O carro só pode virar para esquerda/direita se sua velocidade for de no mínimi 1km e no máximo 40km;
+    public static void menu(Carro carroGabriel){
+        Scanner scan = new Scanner(System.in);
+        int escolha = -1;
+        while(escolha != 0){
 
-    */
+
+                System.out.println("O que deseja fazer no seu carro?\n");
+                System.out.println("1. Ligar carro.       5. Virar esquerda/direita");
+                System.out.println("2. Desligar carro     6. Verificar Velocidade");
+                System.out.println("3. Acelerar           7. Trocar marcha");
+                System.out.println("4. Desacelerar        0. Sair do programa ");
+                System.out.println("\n . Escolha o que deseja fazer:");;
+            escolha = scan.nextInt();
+
+                switch (escolha){
+                    case 1: carroGabriel.ligarCarro(); break;
+                    case 2: carroGabriel.desligarCarro(); break;
+                    case 3: carroGabriel.acelerar(); break;
+                    case 4: carroGabriel.desacelerar(); break;
+                    case 5: carroGabriel.virarEsquerdaOuDireita(); break;
+                    case 6: carroGabriel.verificarVelocidade(); break;
+                    case 7: carroGabriel.trocarMarcha(); break;
+                    case 0: break;
+                    default: menu(carroGabriel); break;
+                }
+        }
+
+    }
 }
