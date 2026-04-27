@@ -2,25 +2,37 @@ package Exercicios.ex3;
 import java.util.Scanner;
 
 public class Main {
+    public static void main(String[] args) throws Exception {
     Scanner scan = new Scanner(System.in);
+    System.out.println(" ##### BEM VINDO AO BANHO NO PETSHOP ##### ");
+    MaquinaDeBanho maquina1 = new MaquinaDeBanho();
+    menu (maquina1);
+    }
+    public static void menu(MaquinaDeBanho maquina1){
+        Scanner scan = new Scanner(System.in);
+        int escolha = -1;
+        while (escolha != 0){
+            System.out.println("\nO que deseja fazer?\n");
+            System.out.println("1. Dar banho       5. Verificar máquina ocupada");
+            System.out.println("2. Abastecer Água     6. Colocar pet na máquina");
+            System.out.println("3. Abastecer Shampoo          7. Tirar pet da máquina");
+            System.out.println("4. Verificar Nível Água e Shampoo        8.Limpar máquina ");
+            System.out.println("0. Sair do programa ");
+            System.out.println("\nEscolha o que deseja fazer:");;
+            escolha = scan.nextInt();
 
-   /*Escreva um código onde temos o controle de banho de um petshop, a maquina de banhos dos pets deve ter as seguintes operações:
-    Dar banho no pet;
-    Abastecer com água;
-    Abastecer com shampoo;
-    verificar nivel de água;
-    verificar nivel de shampoo;
-    verificar se tem pet no banho;
-    colocar pet na maquina;
-    retirar pet da máquina;
-    limpar maquina.
-    Siga as seguintes regras para implementação
-
-    A maquina de banho deve permitir somente 1 pet por vez;
-    Cada banho realizado irá consumir 10 litros de água e 2 litros de shampoo;
-    A máquina tem capacidade máxima de 30 litros de água e 10 litros de shampoo;
-    Se o pet for retirado da maquina sem estar limpo será necessário limpar a máquina para permitir a entrada de outro pet;
-    A limpeza da máquina ira consumir 3 litros de água e 1 litro de shampoo;
-    O abastecimento de água e shampoo deve permitir 2 litros por vez que for acionado;
-    */
+            switch (escolha){
+                case 1: maquina1.banho(); break;
+                case 2: maquina1.abastecerAgua(); break;
+                case 3: maquina1.abastecerShampoo(); break;
+                case 4: maquina1.verificarNivelAguaEShampoo(); break;
+                case 5: maquina1.verificarPetNaMaquina(); break;
+                case 6: maquina1.colocarPetNaMaquina(); break;
+                case 7: maquina1.retirarPetNaMaquina(); break;
+                case 8: maquina1.limparMaquina(); break;
+                case 0: break;
+                default: menu(maquina1); break;
+            }
+        }
+    }
 }
