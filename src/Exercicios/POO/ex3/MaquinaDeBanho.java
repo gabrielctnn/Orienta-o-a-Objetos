@@ -1,4 +1,4 @@
-package Exercicios.ex3;
+package Exercicios.POO.ex3;
 import java.util.Scanner;
 
 public class MaquinaDeBanho {

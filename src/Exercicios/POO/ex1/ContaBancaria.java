@@ -1,4 +1,4 @@
-    package Exercicios.ex1;
+    package Exercicios.POO.ex1;
     import java.util.Scanner;
 
     public class ContaBancaria {

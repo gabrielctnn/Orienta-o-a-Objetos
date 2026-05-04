@@ -1,4 +1,4 @@
-package Exercicios.ex2;
+package Exercicios.POO.ex2;
 import java.util.Scanner;
 
 public class Main {
